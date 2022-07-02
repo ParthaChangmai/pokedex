@@ -5,7 +5,11 @@ const PokeCard = ({ pokemon }) => {
 	return (
 		<div className="bg-black hover:opacity-80 container mx-auto rounded-bl-3xl rounded-tr-3xl text-white flex flex-col items-center gap-1 p-6 cursor-pointer">
 			<div>
-				<img src={pokemon.sprites.front_default} alt="pokemon" />
+				<img
+					className={`bg-${pokemon.types[0].type.name} rounded-full`}
+					src={pokemon.sprites.front_default}
+					alt="pokemon"
+				/>
 			</div>
 			<div>
 				<h1 className="font-bold uppercase text-2xl">{pokemon.name}</h1>
