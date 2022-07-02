@@ -7,7 +7,7 @@ import './index.css';
 
 function App() {
 	return (
-		<div className="min-h-screen bg-gray-200">
+		<div className="min-h-screen bg-slate-800">
 			<Routes>
 				<Route path="/" element={<Pokemons />} />
 				<Route path="/pokemon/:name" element={<SinglePokemon />} />
