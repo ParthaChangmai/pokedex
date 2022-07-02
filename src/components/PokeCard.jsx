@@ -67,7 +67,11 @@ const PokeCard = ({ pokemon }) => {
 				className={`font-semibold bg-${pokemon.types[0].type.name} hover:bg-opacity-100 shadow-lg shadow-gray-600 hover:shadow-lg hover:shadow-${pokemon.types[0].type.name} bg-opacity-70 container mx-auto rounded-bl-3xl rounded-tr-3xl text-white flex flex-col items-center gap-1 p-6 cursor-pointer transition-all duration-500 ease-in-out`}
 			>
 				<div>
-					<img src={pokemon.sprites.front_default} alt="pokemon" />
+					<img
+						className="h-40"
+						src={pokemon.sprites.other.dream_world.front_default}
+						alt="pokemon"
+					/>
 				</div>
 				<div>
 					<h1 className="font-extrabold uppercase text-2xl">{pokemon.name}</h1>
