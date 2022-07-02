@@ -26,15 +26,15 @@ const Pokemons = () => {
 				<input
 					type="text"
 					placeholder="Search pokemon"
-					className="px-2 md:px-5 py-1 rounded-lg bg-gray-800 border-2 border-gray-600"
+					className="px-2 md:px-5 py-1 rounded-lg bg-slate-800 border-none outline-none"
 				/>
-				<button className="ml-4 rounded-lg px-2 py-1 bg-black hover:bg-slate-700">
+				<button className="ml-4 rounded-lg px-2 py-1 bg-slate-800 hover:bg-slate-700">
 					Search
 				</button>
 			</div>
 			{pokemons.loading && <div>Loading...</div>}
 			{pokemons.error && <div>Error!</div>}
-			<div className="pb-2 grid sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-9 xl:gap-14">
+			<div className="pb-2 grid sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-5 gap-6 md:gap-9 xl:gap-14">
 				{pokemons.pokemons &&
 					pokemons?.pokemons?.map(({ data }) => {
 						return <PokeCard key={data.id} pokemon={data} />;
