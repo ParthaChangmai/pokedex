@@ -21,14 +21,14 @@ const Pokemons = () => {
 	console.log(limit);
 
 	return (
-		<div className="px-2 flex flex-col items-center">
-			<div className="pb-5 pt-2 text-white">
+		<div className="container mx-auto px-2 flex flex-col items-center">
+			<div className="py-12 text-black">
 				<input
 					type="text"
 					placeholder="Search pokemon"
-					className="px-2 md:px-5 py-1 rounded-lg bg-slate-800 border-none outline-none"
+					className="px-2 md:px-5 py-3 rounded-lg bg-slate-100  border-none outline-none"
 				/>
-				<button className="ml-4 rounded-lg px-2 py-1 bg-slate-800 hover:bg-slate-700">
+				<button className="ml-4 rounded-lg px-2 md:px-5 py-3 bg-slate-100 hover:text-white hover:bg-slate-700">
 					Search
 				</button>
 			</div>
