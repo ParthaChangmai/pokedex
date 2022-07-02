@@ -9,16 +9,15 @@ const initialState = {
 
 export const getAllPokemons = createAsyncThunk(
 	'pokemons/getAllPokemons',
-	({ limit }) => {
-		return axios
+	({ limit }) =>
+		axios
 			.get(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=${limit}`)
 			.then((res) => {
 				return res.data.results;
 			})
 			.then((results) => {
 				return Promise.all(results.map((res) => axios.get(res.url)));
-			});
-	}
+			})
 ); // async thunk
 
 const pokemonsSlice = createSlice({
