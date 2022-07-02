@@ -4,12 +4,21 @@ import { getAllPokemons } from '../features/slice/pokemonSlice';
 import PokeCard from '../components/PokeCard';
 
 const Pokemons = () => {
+	const [limit, setLimit] = useState(15);
+
 	const dispatch = useDispatch();
 	const pokemons = useSelector((state) => state.pokemons);
 
 	useEffect(() => {
-		dispatch(getAllPokemons());
-	}, []);
+		dispatch(getAllPokemons({ limit }));
+
+		window.addEventListener('scroll', function () {
+			if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+				setLimit(limit + 10);
+			}
+		});
+	}, [limit]);
+	console.log(limit);
 
 	return (
 		<div className="px-2 flex flex-col items-center">
