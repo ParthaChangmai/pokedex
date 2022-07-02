@@ -3,7 +3,7 @@ import React from 'react';
 const PokeCard = ({ pokemon }) => {
 	return (
 		<div
-			className={`bg-${pokemon.types[0].type.name} hover:opacity-80 container mx-auto rounded-bl-3xl rounded-tr-3xl text-white flex flex-col items-center gap-1 p-6 cursor-pointer`}
+			className={` bg-${pokemon.types[0].type.name} hover:opacity-80 container mx-auto rounded-bl-3xl rounded-tr-3xl text-white flex flex-col items-center gap-1 p-6 cursor-pointer`}
 		>
 			<div>
 				<img src={pokemon.sprites.front_default} alt="pokemon" />
@@ -18,7 +18,7 @@ const PokeCard = ({ pokemon }) => {
 			<div className="flex gap-5 pt-5">
 				{pokemon.types.map((type) => (
 					<p
-						className={` bg-${type.type.name} px-4 py-2 border-2 border-${type.type.name} rounded-lg capitalize`}
+						className={` bg-${type.type.name} px-4 py-2 border-2 border-white rounded-lg capitalize`}
 					>
 						{type.type.name}
 					</p>
