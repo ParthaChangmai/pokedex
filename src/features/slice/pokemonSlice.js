@@ -9,9 +9,9 @@ const initialState = {
 
 export const getAllPokemons = createAsyncThunk(
 	'pokemons/getAllPokemons',
-	() => {
+	({ offset, limit }) => {
 		return axios
-			.get('https://pokeapi.co/api/v2/pokemon/')
+			.get(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=${limit}`)
 			.then((res) => {
 				return res.data.results;
 			})
